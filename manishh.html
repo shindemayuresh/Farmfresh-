@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmfresh - Fresh Farm Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-leaf"></i> Farmfresh
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search for fresh products...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#cart" id="cart-link">Cart (<span id="cart-count">0</span>)</a>
+            <a href="#account">Account</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Page -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Fresh from the Farm to Your Door</h1>
+                <p>Organic vegetables, fruits, and more. Delivered fresh!</p>
+                <button class="btn-primary">Shop Now</button>
+            </div>
+            <img src="https://via.placeholder.com/600x400/4CAF50/FFFFFF?text=Farm+Banner" alt="Farm Banner">
+        </section>
+
+        <section id="featured" class="products">
+            <h2>Featured Products</h2>
+            <div class="product-grid" id="product-grid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section id="categories" class="categories">
+            <h2>Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category" data-category="vegetables"><i class="fas fa-carrot"></i> Vegetables</div>
+                <div class="category" data-category="fruits"><i class="fas fa-apple-alt"></i> Fruits</div>
+                <div class="category" data-category="organic"><i class="fas fa-seedling"></i> Organic Products</div>
+                <div class="category" data-category="dairy"><i class="fas fa-cheese"></i> Dairy</div>
+                <div class="category" data-category="tools"><i class="fas fa-tools"></i> Farm Tools</div>
+            </div>
+        </section>
+
+        <!-- Product Details (Hidden by default, shown via JS) -->
+        <section id="product-details" class="product-details" style="display: none;">
+            <div class="product-info">
+                <img id="detail-img" src="" alt="">
+                <div>
+                    <h2 id="detail-name"></h2>
+                    <p id="detail-price"></p>
+                    <p id="detail-desc"></p>
+                    <div class="reviews">
+                        <h3>Reviews</h3>
+                        <p>⭐⭐⭐⭐☆ (4.5/5) - Fresh and organic!</p>
+                    </div>
+                    <button class="btn-primary" id="buy-now">Buy Now</button>
+                    <button class="btn-secondary" id="add-to-cart-detail">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Page -->
+        <section id="cart" class="cart" style="display: none;">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <button class="btn-primary" id="checkout-btn">Proceed to Checkout</button>
+        </section>
+
+        <!-- Account Pages -->
+        <section id="account" class="account" style="display: none;">
+            <div id="login-form">
+                <h2>Login</h2>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button class="btn-primary">Login</button>
+                <p><a href="#" id="show-signup">Sign Up</a></p>
+            </div>
+            <div id="signup-form" style="display: none;">
+                <h2>Sign Up</h2>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button class="btn-primary">Sign Up</button>
+                <p><a href="#" id="show-login">Login</a></p>
+            </div>
+        </section>
+
+        <!-- Checkout Page -->
+        <section id="checkout" class="checkout" style="display: none;">
+            <h2>Checkout</h2>
+            <form>
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Address">
+                <input type="text" placeholder="Card Number">
+                <button class="btn-primary">Place Order</button>
+            </form>
+        </section>
+
+        <!-- About & Contact -->
+        <section id="about" class="about" style="display: none;">
+            <h2>About Us</h2>
+            <p>Farmfresh delivers the freshest farm products directly from local farms.</p>
+            <h2>Contact</h2>
+            <p>Email: info@farmfresh.com | Phone: 123-456-7890</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Farmfresh. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
